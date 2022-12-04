@@ -32,8 +32,12 @@ body {
     justify-content: flex-start;
 
     @include tablet {
-        height: 40vh; 
+        height: 50vh; 
 
+    }
+
+    @include desktop {
+        height: 60vh; 
     }
 
 

@@ -37,8 +37,10 @@ footer {
     }
     .column__one--icons {
         padding: 16px 0 24px 1rem;
+        
         @include tablet {
             width: 40%;
+            padding-left: 3%;
 
         }
 
@@ -69,11 +71,11 @@ footer {
             width: 40%;
             position: relative;  
             bottom: 15rem;
-            right: -35rem;
+            right: -38rem;
         }
         @include desktop {
             bottom: 15rem;
-            right: -49rem;
+            right: -68rem;
         }
 
 
