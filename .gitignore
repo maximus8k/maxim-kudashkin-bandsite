@@ -1,5 +1,5 @@
 debug.log
 *.css
 *.css.map
-assets/
+.DS_Store
 node_modules
