@@ -6,24 +6,24 @@ $desktop-breakpoint: 1280px;
 // FONT
 @font-face {
     font-family: 'AvenirNextRegular'; 
-    src: url("../assets/font/AvenirNextLTPro-Regular.otf") format("opentype"),
-        url("../assets/font/alternative_files/AvenirNextLTPro.ttf") format("truetype");
+    src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"),
+        url("../../assets/fonts/alternative_files/AvenirNextLTPro.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'AvenirNextDemi';
-    src: url("../assets/font/AvenirNextLTPro-Demi.otf") format("opentype"),
-        url("../assets/font/alternative_files/AvenirNextLTProDemi.ttf") format("truetype");
+    src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype"),
+        url("../../assets/fonts/alternative_files/AvenirNextLTProDemi.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'AvenirNextBold';
-    src: url("../assets/font/AvenirNextLTPro-Bold.otf") format("opentype"),
-        url("../assets/font/alternative_files/AvenirNextLTProBold.ttf") format("truetype");
+    src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"),
+        url("../../assets/fonts/alternative_files/AvenirNextLTProBold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
 }
@@ -36,3 +36,7 @@ $white: #FFFFFF;
 $sandsite-darkblack: #000000;
 $mercury: #E1E1E1;
 $alabaster: #FAFAFA;
+
+
+
+   

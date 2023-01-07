@@ -1,8 +1,11 @@
 //Global
 @use 'partials/_variables.scss' as *;
-@use 'partials/mixins.scss' as *;
+@use 'partials/_mixins.scss' as *;
 @use 'partials/_header.scss' as *;
 @use 'partials/_footer.scss' as *;
+@use 'partials/_comments.scss' as *;
+
+
 
 * {
     box-sizing: border-box;
@@ -215,22 +218,29 @@ body {
 
     .comments__title {
         width: 100%;
-        font-size: 1.2rem;
+        font-size: 2rem;
         padding-bottom: 16px;
         display: inline-block;
     
     }
+    .comments__form--avatar {
+        width: 20%;
+    }
 
-    .comments__form {
-        width: 100%;
+    img{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+
+    .ccomments__form--body{
+        width: 80%;
         display: flex;
         flex-direction: row;
 
 
 
-        .comments__avatar {
-            width: 20%;
-        }
+
 
         form {
             width: 80%;
