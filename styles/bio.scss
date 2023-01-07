@@ -216,6 +216,10 @@ body {
     background-color: $white;
     padding: 24px 1rem 16px 1rem;
 
+    .comments__form--container {
+        display: flex;
+        flex-direction: row;
+    }
     .comments__title {
         width: 100%;
         font-size: 2rem;
@@ -225,13 +229,14 @@ body {
     }
     .comments__form--avatar {
         width: 20%;
+
+        img{
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+        }
     }
 
-    img{
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-    }
 
     .ccomments__form--body{
         width: 80%;
