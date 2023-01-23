@@ -1,8 +1,8 @@
-@import './partials/variables';
-@import './partials/mixins';
-@import './partials/header';
-@import './partials/footer';
-@import './partials/comments';
+//Global
+@use 'partials/_variables.scss' as *;
+@use 'partials/mixins.scss' as *;
+@use 'partials/_header.scss' as *;
+@use 'partials/_footer.scss' as *;
 
 * {
     box-sizing: border-box;
@@ -226,6 +226,43 @@ body {
 
         }
     }
+}
+
+
+//Comments Section
+//Did not complete COMMENTS section for Sprint 2. Will have it ready for Sprint 3. Apologies, will do better
+.comments {
+    width: 100%;
+    background-color: $white;
+    padding: 24px 1rem 16px 1rem;
+
+    .comments__title {
+        width: 100%;
+        font-size: 1.2rem;
+        padding-bottom: 16px;
+        display: inline-block;
+    
+    }
+
+    .comments__form {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+
+
+        .comments__avatar {
+            width: 20%;
+        }
+
+        form {
+            width: 80%;
+        }
+
+
+    }
+
+
 }
 
 
