@@ -1,0 +1,226 @@
+@import './partials/variables';
+@import './partials/mixins';
+@import './partials/header';
+@import './partials/footer';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'AvenirNextRegular';
+    color: $black;
+}
+
+//Hero Section
+.hero {
+    background-image: url('../assets/images/hero-shows.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+    @include tablet {
+        min-height: 31rem;
+        height: 45vh;
+    }
+
+    @include desktop {
+        height: 50vh;
+        background-position: 50% 25%;
+    }
+
+    &__overlay {
+        background-color: #32323280;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 2rem 0;
+        margin: 0 1rem;
+
+        @include tablet {
+            margin: 0 2.25rem;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &__heading {
+        color: $white;
+        max-width: 15rem;
+        padding-bottom: 1rem;
+        font-size: 24px;
+
+        @include tablet {
+            padding-bottom: 1.5rem;
+            max-width: 31rem;
+        }
+    }
+
+    &__title {
+        color: $white;
+        max-width: 15rem;
+        padding-top: 2rem;
+        font-size: 60px;
+
+
+        @include tablet {
+            padding-bottom: 1.5rem;
+            max-width: 31rem;
+        }
+    }
+        
+    
+    &__audio {
+        width: 100%;
+
+        @include tablet {
+            max-width: 28rem;
+        }
+
+        @include desktop {
+            align-self: center;
+        }
+    }
+}
+
+//Shows Section
+.shows {
+    margin: 0 1rem;
+
+    @include tablet {
+        margin: 0 2.25rem;
+    }
+
+    &__container {
+        
+        
+
+
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            gap: 5rem;
+        }
+    }
+
+    &__heading {
+        padding-top: 3rem;
+        padding-left: 1rem;
+
+        @include tablet {
+            padding-left: 0;
+        }
+    }
+
+    &__schedule {
+
+        @include desktop {
+            padding-top: 2.5rem;
+            width: 100%;
+        }
+    }
+    .table {
+        table-layout: fixed;
+        width: 100%;
+        vertical-align: center;
+        border-collapse: collapse;
+        text-align:left;
+        
+        &__heading {
+            .table__row {
+                display: none;
+
+                @include tablet {
+                        display: flex;
+                        flex-direction: row;
+                }
+                .field {
+                    flex: 1;
+                    padding: 1rem;
+
+                    @include tablet {
+                        padding: 1.5rem 1.12rem;
+                    }
+                }
+            }
+        }
+
+        &__body {
+            .table__row {
+                display: block;
+                border-bottom: 1px solid $mercury;
+
+                @include tablet {
+                    display: flex;
+                    align-items: center;
+                }
+                &:hover {
+                    background-color: $alabaster;
+                }
+                &--selected {
+                    @include tablet {
+                        background-color: $mercury;
+                        &:hover {
+                            background-color: $mercury;
+                        }
+                    }
+
+                }
+                .field {
+                    padding: 1rem;
+                    display: block;
+                    width: 100%;
+
+                    @include tablet {
+                        flex: 1;
+                        padding: 1.5rem 1.125rem;
+                        display: table-cell;
+                        width: auto;
+                    }
+                    &:before {
+                        color: $mercury;
+                        line-height: 1.25rem;
+                        font-size: 0.6rem;
+
+                        @include tablet {
+                          font-size: 0.75rem;
+                          line-height: 1.25rem;
+                        }
+                        content: attr(data-label);
+                        display: block;
+                        @include tablet {
+                            display: none;
+                        }
+                    }
+                    .btn {
+                        width: 100%;
+                        min-width: 10rem;
+                        
+                        @include tablet {
+                            width: 10.30rem;
+                        }
+                    }
+                }
+            }
+            .table__date {
+                font-weight: 600;
+            }
+        }
+    } 
+}

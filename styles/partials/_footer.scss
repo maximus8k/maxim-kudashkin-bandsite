@@ -1,95 +1,105 @@
-@use '_variables.scss' as *;
-@use '_mixins.scss' as *;
+@import '_variables.scss' as ;
+@import '_mixins.scss' as ;
 
 //Footer
 
 footer {
     color: $white;
     width: 100%;
-    background-color: $bandsite-black;
+    background-color: $black;
+
+    @include tablet {
+
+        padding-top: 3rem;
+    }
+
+.footer__container {
+    margin: 0 1rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 2% 2% 2% 10%;
     @include tablet {
+        margin: 0 2.25rem;
         flex-direction: row;
-        padding: 48px 3rem 36px 3rem;
-    }
+      }
+    @include desktop {
+        max-width: 64rem;
+        margin: 0 auto;
+      }
 
+        h2 {
+            font-size: 2rem;
+            @include tablet {
+                flex-direction: row;
+                justify-content: space-around;
 
-
-
-    h2 {
-        font-size: 2rem;
-        @include tablet {
-            flex-direction: row;
-            justify-content: space-around;
-
+            }
         }
-    }
-    .column__one--title {
-        padding-top: 24px;
-        width: 100%;
-        @include tablet {
-            width: 30%;
-
-        }
-    }
-    .column__one--icons {
-        padding: 16px 0 24px 1rem;
-        
-        @include tablet {
-            width: 40%;
-            padding-left: 3%;
-
-        }
-
-        img {
-            padding: 1rem 2rem 0 0;
-        }
-    }
-
-    .column__one {
-        padding-top: 16px;
-        width: 100%;
-        padding-right: 4%;
-        @include tablet {
-            width: 33%;
-            padding-right: 1rem;
-            font-size: 0.9rem;
+        .column__one--title {
             padding-top: 24px;
+            width: 100%;
+            @include tablet {
+                width: 30%;
+
+            }
+        }
+        .column__one--icons {
+            padding: 16px 0 24px 1rem;
+            
+            @include tablet {
+                width: 40%;
+                padding-left: 3%;
+
+            }
+
+            img {
+                padding: 1rem 2rem 0 0;
+            }
+        }
+
+        .column__one {
+            padding-top: 16px;
+            width: 100%;
+            padding-right: 3%;
+            @include tablet {
+                width: 33%;
+                padding-right: 1rem;
+                font-size: 0.9rem;
+                padding-top: 24px;
+
+            }
 
         }
 
-    }
+        .column__logo {
+            padding-top: 3rem;
+            width:10%;
+            padding-right: 10%;
+            
+            @include tablet {
+                width: 40%;
+                position: relative;  
+                bottom: 15rem;
+                right: -38rem;
+            }
+            @include desktop {
+                bottom: 15rem;
+                right: -60rem;
+            }
 
-    .column__logo {
-        padding-top: 3rem;
-        width:10%;
-        padding-right: 10%;
-        @include tablet {
-            width: 40%;
-            position: relative;  
-            bottom: 15rem;
-            right: -38rem;
+
+            a {
+                color: $white;
+                text-decoration: none;
+            }
         }
-        @include desktop {
-            bottom: 15rem;
-            right: -68rem;
+        .column__copyright {
+            width: 100%;
+            font-size: .8rem;
+            display: inline-block;
+            padding: 16px 0 16px 0;
+
         }
-
-
-        a {
-            color: $white;
-            text-decoration: none;
-        }
-    }
-    .column__copyright {
-        width: 100%;
-        font-size: .8rem;
-        display: inline-block;
-        padding: 16px 0 16px 0;
-
     }
 }
 
