@@ -1,5 +1,5 @@
 const link = "https://project-1-api.herokuapp.com/comments";
-const apiKey = "?api_key=55ad76c1-462d-4a73-a270-efbab320dd6a";
+const apiKey = "?api_key=3768a2ff-4cf2-4b98-9bb0-80100a1e26ee";
 
 //Function to converty comment data and receive HTML card
 function displayComment(comment){
