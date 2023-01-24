@@ -41,7 +41,7 @@ function showTable() {
       tableRow.appendChild(btnField);
 
       const tableBtn = document.createElement("button");
-      tableBtn.classList.add("btn");
+      tableBtn.classList.add("button");
       tableBtn.innerHTML = "BUY TICKETS";
       btnField.appendChild(tableBtn);
     });

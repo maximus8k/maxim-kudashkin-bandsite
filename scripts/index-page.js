@@ -7,8 +7,8 @@ function displayComment(comment){
       commentLi.classList.add("item");
       commentsList.appendChild(commentLi);
 
-      const itemImg = document.createElement("img");
-      itemImg.classList.add("item__img");
+      const itemImg = document.createElement("avatar");
+      itemImg.classList.add("item__avatar");
       itemImg.setAttribute("src", " ");
       commentLi.appendChild(itemImg);
 
@@ -40,9 +40,7 @@ function displayComment(comment){
       bodyCopy.innerText = comment.comment;
       itemBody.appendChild(bodyCopy);
 
-      const itemFooter = document.createElement("div");
-      itemFooter.classList.add("item__footer");
-      itemSection.appendChild(itemFooter);
+
 }
 //Function to return comments
 function showCommentsList() {
@@ -64,25 +62,6 @@ const form = document.querySelector(".form");
 const commentsList = document.querySelector(".comments__list");
 showCommentsList();
 
-//Add Comment
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const submittedName = event.target.formName;
-  const submittedComment = event.target.formComment;
-  if (formValidation(submittedName,submittedComment)) {
-    const postedComment = {
-      name: submittedName.value,
-      comment: submittedComment.value,
-    };
-    const addComment = axios.post(link + apiKey, postedComment);
-    addComment.then((res) => {
-      event.target.reset();
-      showCommentsList();
-    });
-  }
-});
-
-
 //Function to check valid characters
 function formValidation (nameField, commentField) {
   const re = /^[a-zA-Z]/
@@ -101,3 +80,22 @@ function formValidation (nameField, commentField) {
     return true
   }
 }
+
+//Add Comment
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const submittedName = event.target.formName;
+  const submittedComment = event.target.formComment;
+  if (formValidation(submittedName,submittedComment)) {
+    const postedComment = {
+      name: submittedName.value,
+      comment: submittedComment.value,
+    };
+    const addComment = axios.post(link + apiKey, postedComment);
+    addComment.then((res) => {
+      event.target.reset();
+      showCommentsList();
+    });
+  }
+});
+

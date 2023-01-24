@@ -1,8 +1,8 @@
 //Global
-@use 'partials/_variables.scss' as *;
-@use 'partials/mixins.scss' as *;
-@use 'partials/_header.scss' as *;
-@use 'partials/_footer.scss' as *;
+@import './partials/variables';
+@import './partials/mixins';
+@import './partials/header';
+@import './partials/footer';
 
 * {
     box-sizing: border-box;
@@ -66,6 +66,7 @@ body {
     margin: 0 1rem;
     width: 100%;
     background-color: $white;
+    color: $darkblack;
 
     @include tablet {
         margin: 0 2.25rem;
@@ -91,7 +92,7 @@ body {
     
 
     &__photo {
-        padding-top: 16px;
+        padding-top: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -106,30 +107,23 @@ body {
 
         }
 
-        &__photo--quote {
-            padding-top: 16px;
-            width: 95%;
+        &__quote {
+            padding-top: .5rem;
+            width: 100%;
 
-
-            p{
-                padding-top: 16px;
-                font-size: 1.2rem;
-                font-weight: 600;
-
-                
                 span {
                     width: 100%;
                     padding-top: 16px;
                     display: inline-block;
                     font-size: 1.2rem;
-                    font-weight: 600;
+                    font-weight: bold;
 
                     @include tablet {
                         font-weight: 500;
                     }
 
                 }
-            }
+            
             
         }
     }
@@ -137,14 +131,14 @@ body {
         padding-top: 24px;
         padding-bottom: 16px;
         font-size: 1.2rem;
-        width: 95%;
+        width: 100%;
         justify-content: left;
 
         @include tablet {
             padding-top: 48px;
             padding-bottom: 36px;
-            padding-left: 2rem;
-            padding-right: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
             font-size: 1.5rem;
         }
     }
@@ -161,37 +155,44 @@ body {
             flex-direction: row;
             justify-content: space-between;
         }
-        
+    }    
 
-        &__main--bio {
-            width: 100%;
-            line-height: 22px;
-            padding-bottom: 16px;
+    &__bio {
+        width: 100%;
+        line-height: 22px;
+        padding-bottom: 16px;
+        color: $black;
             
-            @include tablet {
-                width: 48%;
-            }
+        @include tablet {
+            width: 48%;
         }
     }
+    
 }
 
 //Photo Gallery
-.gallery {
-    width: 100%;
-    background-color: $alabaster;
-    padding-top: 2rem;
-    margin: 0 1rem;
-   
-    @include tablet {
-        font-size: 2rem;
-        margin: 0 2.25rem;
-        padding-bottom: 1.5rem;
-    }
 
-    @include desktop {
-        max-width: 64rem;
-        margin: 0 auto;
-      }
+
+.gallery {
+width: 100%;
+background-color: $alabaster;
+     
+    &__container {
+        width: 100%;
+        padding-top: 2rem;
+        margin: 0 1rem;
+       
+        @include tablet {
+            font-size: 2rem;
+            margin: 0 2.25rem;
+            padding-bottom: 1.5rem;
+        }
+    
+        @include desktop {
+            max-width: 64rem;
+            margin: 0 auto;
+          }
+    }
 
     &__title {
         font-size: 1.5rem;
@@ -230,40 +231,186 @@ body {
 
 
 //Comments Section
-//Did not complete COMMENTS section for Sprint 2. Will have it ready for Sprint 3. Apologies, will do better
 .comments {
-    width: 100%;
-    background-color: $white;
-    padding: 24px 1rem 16px 1rem;
+    padding-top: 3rem;
 
-    .comments__title {
-        width: 100%;
-        font-size: 1.2rem;
-        padding-bottom: 16px;
-        display: inline-block;
-    
+    &__container {
+        margin: 0 1rem;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            margin: 0 2.25rem;
+            padding-bottom: 1.5rem;
+          }
+
+          @include desktop {
+            max-width: 64rem;
+            margin: 0 auto;
+          }
+    }
+    &__box{
+        .form {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            padding-bottom: 1rem;
+
+            @include tablet {
+                padding-bottom: 1.5rem;
+              }
+
+            &__avatar {
+                border-radius: 50%;
+                height: 2.25rem;
+                width: 2.25rem;
+                object-fit: cover;
+                object-position: left;
+                margin-top: 20px;
+                
+
+                @include tablet {
+                    height: 3rem;
+                    width: 3rem;
+                }
+            }
+
+            &__fields {
+                display: flex;
+                flex-direction: column;
+                
+                
+                .button {
+                    font-family: 'AvenirNextRegular'; 
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    font-size: 0.6rem;
+                    line-height: 1.2rem;
+                    font-size: 1rem;
+                    height: 2.5rem;
+                    min-width: 150px;
+                    border-radius: 4px;
+                    padding: 0 2rem;
+                    background-color: $black;
+                    color: $white;
+                    border: 0;
+                    &:hover {
+                      background-color: $darkblack;
+                      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                    }
+                    @include tablet {
+                      width: 150px;
+                      align-self: flex-end;
+                      font-size: 0.75rem;
+                      line-height: 1.25rem;
+                    }
+                }
+
+            }
+
+            &__label {
+                padding-bottom: 4px;
+                color: $mercury;
+                align-items:baseline;
+
+
+            }
+            &__input {
+                height: 2.25rem;
+                border-radius: 4px;
+                padding: .75rem;
+                border: 1px solid $mercury;
+                margin-bottom: 1rem;
+                width: 75vw;
+
+                @include tablet {
+                    height: 3rem;
+                    padding: 1rem;
+                    width: 60vw;
+                    max-width: 31.25rem;
+                }
+                &:focus{
+                    outline: none;
+                    border-color: $black;
+                }
+                &--error {
+
+                    &:focus {
+                        border-color: #d22d2d;
+                    }
+                }
+
+                &--textarea {
+                    resize: none;
+                    height: auto;
+                    font-weight: normal;
+                    font-family: 'AvenirNextRegular';
+
+                }
+            }
+        }
     }
 
-    .comments__form {
-        width: 100%;
+    &__display {
         display: flex;
-        flex-direction: row;
-
-
-
-        .comments__avatar {
-            width: 20%;
-        }
-
-        form {
-            width: 80%;
-        }
-
-
+        justify-content: center;
     }
 
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
 
+        .item {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 1.25rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid $mercury;
+            margin: auto;
+
+            &__avatar {
+                background-color: $mercury;
+                border-radius: 50%;
+                height: 2.25rem;
+                width: 2.25rem;
+                object-fit: cover;
+                object-position: left;
+
+                @include tablet {
+                    height: 3rem;
+                    width: 3rem;
+                }
+            }
+
+            &__section {
+                justify-content: center;
+                width: 75vw;
+
+                @include tablet {
+                    width: 60vw;
+                    max-width: 31rem;
+                }
+
+            }
+            &__title {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &__name {
+                font-weight: 600;
+            }
+
+            &__date {
+                color: $mercury;
+            }
+        }
+    }
 }
+
 
 
 

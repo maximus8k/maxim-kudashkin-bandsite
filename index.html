@@ -49,15 +49,14 @@
         </div>
         <div class="about__photo">
                 <img src="./assets/images/band.jpg" alt="band">
-            <div class="about__photo--quote">
-                <p>“We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board'”
+            <blockquote class="about__quote">
+                <h3>“We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board'”</h3>
+            </blockquote>
                     <span>- Bryan Teddy, lead vocalist of The Bees Knees</span>
-                </p>  
-            </div>
         </div>
         <h3>The Bees Knees</h3>
         <div class="about__main">
-            <div class="about__main--bio">
+            <div class="about__bio">
                 <p>The Bees Knees is a pop rock band
                     originating from San Francisco, California.
                     The band consists of lead vocalist Bryan
@@ -73,7 +72,7 @@
                     succeed even further, pushing them to sign
                     with Magenta Records.</p>  
             </div>
-            <div class="about__main--bio">
+            <div class="about__bio">
                 <p>
                     From there, the band has soared, gaining international
                     recognition and ranking in the top 10 on the Poster Charts. New
@@ -89,8 +88,9 @@
         </div>
 </section>   
 
-<!-- Photo Gallery -->          
-    <section class="gallery">
+<!-- Photo Gallery -->
+<section class="gallery">
+    <div class="gallery__container">
         <div class="gallery__title">
             <h2>Photo Gallery</h2>
         </div>
@@ -105,7 +105,8 @@
             <img src="./assets/images/Photo-gallery-8.jpg" alt="DJ">
             <img src="./assets/images/Photo-gallery-9.jpg" alt="Confetti">
         </div>
-    </section>
+      </div>
+</section>      
 
 <!-- Comment Section -->
 <section class="comments">
@@ -113,7 +114,7 @@
       <h2>Join the Conversation</h2>
       <div class="comments__box">
         <div class="form">
-          <img class="form__img" src="./assets/images/Mohan-muruge.jpg" alt="mohan muruge" />
+          <img class="form__avatar" src="./assets/images/Mohan-muruge.jpg" alt="mohan muruge" />
           <form class="form__fields">
             <label class="form__label" for="name">NAME</label>
             <input
@@ -124,7 +125,7 @@
               placeholder="Enter your Name"
               name="name"
               oninvalid="this.style.border = '1px solid #d22d2d';"
-            />
+              >
             <label class="form__label" for="comment-input">COMMENT</label>
             <textarea
               class="form__input form__input--textarea"
@@ -135,25 +136,24 @@
               placeholder="Add a new comment"
               minlength="1"
               maxlength="200"
-              oninvalid="this.style.border = '1px solid #d22d2d';">
-            </textarea>
-            <button class="btn label--btn" type="submit">COMMENT</button>
+              required
+              oninvalid="this.style.border = '1px solid #d22d2d';"
+              ></textarea>
+            <button class="button" type="submit">COMMENT</button>
           </form>
         </div>
         <div class="comments__display">
           <ul class="comments__list">
             <li class="item">
-              <img class="item__img" src="./assets/Images/Mohan-muruge.jpg" alt=""/>
+              <img class="item__avatar" src="./assets/Images/Mohan-muruge.jpg" alt=""/>
               <div class="item__section">
                 <div class="item__title">
                   <p class="item__name">Place Holder</p>
                   <p class="item__date">Place Holder</p>
                 </div>
                 <div class="item__body">
-                  <p>
-                    Place Holder
-                  </p>
-                  </div>
+                  <p>Place Holder</p>
+                </div>
                 </div>
               </div>
             </li>
@@ -161,7 +161,7 @@
         </div>
       </div>
     </div>
-  </section>
+</section>
 
 
 <!-- Footer --> 
